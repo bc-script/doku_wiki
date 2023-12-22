@@ -12,10 +12,13 @@ RUN rm dokuwiki-stable.tgz
 
 FROM php:8-apache-bullseye
 
+
 COPY --from=build /app ./var/www/html
 
 RUN chown -R www-data:www-data /var/www/
 
 RUN chmod -R 755 /var/www/html
 
-EXPOSE 8888
+VOLUME html: ./var/www/html
+
+EXPOSE 80
