@@ -13,7 +13,7 @@ RUN rm dokuwiki-stable.tgz
 FROM php:8-apache-bullseye
 
 
-COPY --from=build /app ./var/www/html
+COPY --from=build /app/ /var/www/html
 
 RUN chown -R www-data:www-data /var/www/
 
