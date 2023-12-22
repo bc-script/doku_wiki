@@ -1,4 +1,4 @@
-FROM  ubuntu:18.04 AS build
+FROM ubuntu:18.04 AS build
 
 WORKDIR /app
 
@@ -19,6 +19,8 @@ RUN chown -R www-data:www-data /var/www/
 
 RUN chmod -R 755 /var/www/html
 
-VOLUME html: ./var/www/html
+VOLUME data
+VOLUME lib
+VOLUME conf
 
 EXPOSE 80
