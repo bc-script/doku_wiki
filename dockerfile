@@ -11,3 +11,5 @@ COPY  dokuwiki.conf /etc/httpd/conf.d/dokuwiki.conf
 RUN cp /var/www/html/.htaccess{.dist,}
 RUN systemctl start httpd
 RUN systemctl enable httpd
+
+CMD [ "executable" ]
