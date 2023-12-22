@@ -14,6 +14,8 @@ FROM php:8-apache-bullseye
 
 COPY --from=build /app ./var/www/html
 
-EXPOSE 8888
-
 RUN chown -R www-data:www-data /var/www/
+
+RUN chmod -R 755 /var/www/html
+
+EXPOSE 8888
