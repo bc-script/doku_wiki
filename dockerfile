@@ -21,14 +21,14 @@ FROM php:8-apache-bullseye
 # Copie os arquivos do diretório de construção para o diretório do servidor web
 COPY --from=build /app/ /var/www/html
 
+# Adicione volumes para os diretórios necessários
+VOLUME ["/var/www/html/data", "/var/www/html/lib", "/var/www/html/conf"]
+
 # Defina as permissões do diretório
 RUN chown -R www-data:www-data /var/www/
 
 # Defina as permissões para os arquivos
 RUN chmod -R 755 /var/www/html
-
-# Adicione volumes para os diretórios necessários
-VOLUME ["/var/www/html/data", "/var/www/html/lib", "/var/www/html/conf"]
 
 # Exponha a porta 80 para o tráfego externo
 EXPOSE 80
