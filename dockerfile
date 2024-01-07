@@ -19,8 +19,4 @@ RUN chown -R www-data:www-data /var/www/
 
 RUN chmod -R 755 /var/www/html
 
-VOLUME data
-VOLUME lib
-VOLUME conf
-
 EXPOSE 80
