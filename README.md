@@ -68,7 +68,7 @@ Substitua `/caminho/para/data`, `/caminho/para/lib` e `/caminho/para/conf` pelos
 
 
 ## Passo 5: Acesse o DokuWiki
-Abra seu navegador e acesse http://ip_do_conteiner para acessar o DokuWiki.
+Abra seu navegador e acesse http://ip-do-conteiner para acessar o DokuWiki.
 
 Agora você tem um contêiner Docker em execução com o DokuWiki, permitindo a personalização e persistência de dados. Este tutorial cobre os passos básicos para construir e executar o DokuWiki usando Docker. Personalize conforme necessário para atender aos requisitos específicos do seu projeto.
 
